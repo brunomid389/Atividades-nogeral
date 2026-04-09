@@ -1,0 +1,57 @@
+import React from 'react';
+
+const CardMaterial = ({ nome, preco }) => {
+  return (
+    <div className="border p-4 rounded-lg shadow bg-white">
+      <div className="bg-gray-200 h-32 w-full rounded mb-3 flex items-center justify-center">
+        <span className="text-gray-400">Imagem</span>
+      </div>
+      <h3 className="font-bold text-lg">{nome}</h3>
+      <p className="text-green-600 font-semibold">R$ {preco}</p>
+      <button className="bg-blue-500 text-white w-full py-2 mt-3 rounded hover:bg-blue-600">
+        Comprar
+      </button>
+    </div>
+  );
+};
+
+// 2. O Componente Principal
+export default function App() {
+  const materiais = [
+    { id: 1, nome: "Bola de Futebol", preco: "89,90" },
+    { id: 2, nome: "Chuteira Society", preco: "199,00" },
+    { id: 3, nome: "Meião Esportivo", preco: "25,00" },
+    { id: 4, nome: "Luva de Goleiro", preco: "120,00" },
+    { id: 5, nome: "Caneleira Pro", preco: "45,00" },
+    { id: 6, nome: "Rede de Futebol", preco: "150,00" },
+    { id: 7, nome: "Bomba de Ar", preco: "35,00" },
+    { id: 8, nome: "Colete de Treino", preco: "19,90" },
+    { id: 9, nome: "Apito de Juiz", preco: "15,00" },
+    { id: 10, nome: "Cartões (Par)", preco: "10,00" },
+    { id: 11, nome: "Cronômetro", preco: "55,00" },
+    { id: 12, nome: "Cones (Kit 10)", preco: "60,00" },
+    { id: 13, nome: "Escada de Agilidade", preco: "80,00" },
+    { id: 14, nome: "Pratos Demarcatórios", preco: "40,00" },
+    { id: 15, nome: "Bolsa Porta-Bolas", preco: "75,00" },
+  ];
+
+  return (
+    <div className="bg-gray-50 min-h-screen">
+      <nav className="bg-blue-600 p-4 text-white text-center font-bold text-xl">
+        Minha Loja de Esportes
+      </nav>
+
+      <main className="p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {materiais.map((item) => (
+            <CardMaterial 
+              key={item.id} 
+              nome={item.nome} 
+              preco={item.preco} 
+            />
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
