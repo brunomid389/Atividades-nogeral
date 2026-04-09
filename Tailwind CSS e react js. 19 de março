@@ -1,0 +1,62 @@
+// src/components/Navbar.jsx
+export default function Navbar() {
+  return (
+    <nav className="flex justify-between items-center bg-gray-900 text-white p-4">
+      <h1 className="text-xl font-bold">Logo</h1>
+      <ul className="flex space-x-4">
+        <li className="cursor-pointer hover:text-gray-400">Home</li>
+        <li className="cursor-pointer hover:text-gray-400">About</li>
+        <li className="cursor-pointer hover:text-gray-400">Services</li>
+        <li className="cursor-pointer hover:text-gray-400">Contact</li>
+      </ul>
+    </nav>
+  );
+}
+
+// src/components/CardProduto.jsx
+export default function CardProduto({ titulo }) {
+  return (
+    <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-white">
+      {/* Imagem Placeholder */}
+      <img 
+        className="w-full h-48 object-cover bg-gray-200" 
+        src="https://via.placeholder.com/300" 
+        alt={titulo} 
+      />
+      
+      <div className="p-6">
+        <h2 className="font-bold text-2xl mb-2">{titulo}</h2>
+        <button className="bg-indigo-500 hover:bg-indigo-600 transition-colors text-white py-2 px-4 rounded w-full">
+          Comprar
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// src/App.jsx
+import Navbar from "./components/Navbar";
+import CardProduto from "./components/CardProduto";
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      {/* Passo 1: Navbar */}
+      <Navbar />
+
+      <main className="p-6">
+        <h1 className="text-3xl font-bold text-center mb-8">Nossos Produtos</h1>
+
+        {/* Passo 3: Grid Responsivo */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+          {/* Passo 2: O Card sendo repetido */}
+          <CardProduto titulo="Produto XYZ" />
+          <CardProduto titulo="Mochila Premium" />
+          <CardProduto titulo="Tênis Esportivo" />
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export default App;
