@@ -1,0 +1,87 @@
+import React, { useState, useEffect } from 'react';
+
+// === QUESITO 9: FUNÇÕES COM OBJETOS (PADRÃO MERCADO) ===
+const CartaoAluno = ({ nome, nota }) => (
+  <div style={{ border: '1px solid gray', padding: '10px' }}>
+    <p>Aluno: {nome} | Nota: {nota}</p>
+  </div>
+);
+
+export default function PaginaExemplo() {
+  // === QUESITO 1: VARIÁVEIS E ESTADO (TIPO "LET") ===
+  const [nome, setNome] = useState("João"); 
+  const [contador, setContador] = useState(0);
+  const [listaNotas, setListaNotas] = useState([8, 5, 9, 10, 6]);
+  
+  // === QUESITO 11: JSON E OBJETOS ===
+  const [perfil, setPerfil] = useState({ id: 1, cargo: "Estudante" });
+
+  // === QUESITO 12: ASSÍNCRONO (SIMULANDO BUSCA DE DADOS) ===
+  useEffect(() => {
+    console.log("Componente carregado! Buscando dados...");
+    
+    // Simulando uma espera de 2 segundos
+    setTimeout(() => {
+      console.log("Dados recebidos da 'nuvem'!");
+    }, 2000);
+  }, []);
+
+  // === QUESITO 6 & 10: FUNÇÃO COM TRATAMENTO DE ERRO ===
+  const adicionarPonto = () => {
+    try {
+      if (contador >= 10) throw new Error("Limite atingido!");
+      setContador(contador + 1);
+    } catch (e) {
+      alert(e.message);
+    }
+  };
+
+  // === QUESITO 7: ARRAYS (FILTRANDO NOTAS BOAS) ===
+  const notasAprovadas = listaNotas.filter(n => n >= 7);
+
+  return (
+    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+      <h1>Guia React para Leigos</h1>
+
+      {/* === QUESITO 3: STRINGS E TEMPLATE STRINGS === */}
+      <section>
+        <h2>Perfil</h2>
+        <p>{`Bem-vindo de volta, ${nome.toUpperCase()}!`}</p>
+        <p>Cargo: {perfil.cargo}</p>
+      </section>
+
+      <hr />
+
+      {/* === QUESITO 2 & 4: OPERADORES E CONDICIONAIS === */}
+      <section>
+        <h2>Contador de Pontos</h2>
+        <p>Pontos: {contador}</p>
+        
+        {/* Condicional: Se for maior que 5, mostra uma mensagem extra */}
+        {contador > 5 ? <p> Tá indo bem!</p> : <p>Continue clicando...</p>}
+        
+        <button onClick={adicionarPonto}>Adicionar +1</button>
+      </section>
+
+      <hr />
+
+      {/* === QUESITO 5 & 7: LAÇOS E ARRAYS (RENDERIZANDO LISTAS) === */}
+      <section>
+        <h2>Notas Aprovadas (Filtro)</h2>
+        <ul>
+          {notasAprovadas.map((nota, index) => (
+            <li key={index}>Nota: {nota}</li>
+          ))}
+        </ul>
+      </section>
+
+      <hr />
+
+      {/* === QUESITO 13: DOM NO REACT === */}
+      <section>
+        <h2>Componente Reutilizável</h2>
+        <CartaoAluno nome={nome} nota={10} />
+      </section>
+    </div>
+  );
+}
