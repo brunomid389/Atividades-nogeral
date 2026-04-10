@@ -28,7 +28,8 @@ Atividade Revisão Desenvolvimento WEB
 Arquitetura node react axios e mysql (mmini projetos)
 Axios com Node.js (slide sem atv)
 Axios (slide sem atv)
-
+Aula Bootstrap React
+Lista de Produto (sobre possiveis peças necessárias para desenvolvimento do PI, não necessário para o nosso grupo)
 
 Atividades faltantes:
 
@@ -39,5 +40,4 @@ Criação de Template com Node.js
 Atividade- Complemento do CRUD
 Concatenação Front e Back 
 CRUD EDITAR
-Lista de Produto
-Aula Bootstrap React
+
