@@ -32,6 +32,8 @@ Aula Bootstrap React
 Lista de Produto (sobre possiveis peças necessárias para desenvolvimento do PI, não necessário para o nosso grupo)
 Aula - Binários e API
 Configurações Visual Code
+Composição e Reutilização - React
+
 
 
 Atividades faltantes:
