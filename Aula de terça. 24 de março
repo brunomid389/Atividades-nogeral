@@ -1,17 +1,14 @@
 SQL:
 
--- Criando o banco de dados
 CREATE DATABASE IF NOT EXISTS teste34;
 USE teste34;
 
--- Criando a tabela 'users' conforme instrução 1 da imagem
 CREATE TABLE IF NOT EXISTS users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(120) NOT NULL,
     email VARCHAR(120) NOT NULL
 );
 
--- Comando para verificar os dados
 SELECT * FROM users;
 
 INDEX.JS:
@@ -31,7 +28,7 @@ app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 app.use(express.static('public')); // Para carregar o style.css
 
-// PASSO 2: Criar a conexão com o MySQL
+// Cria a conexão com o MySQL
 const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root', // substitua pelo seu usuário
@@ -39,7 +36,6 @@ const conn = mysql.createConnection({
     database: 'teste34'
 });
 
-// DICA DA IMAGEM: Testar a conexão
 conn.connect(function (err) {
     if (err) {
         console.log('Erro ao conectar ao MySQL:', err);
@@ -48,12 +44,11 @@ conn.connect(function (err) {
     }
 });
 
-// Rota inicial - Renderiza o formulário (home.handlebars)
+// Renderiza o formulário (home.handlebars)
 app.get('/', (req, res) => {
     res.render('home');
 });
 
-// PASSO 3: Rota POST para salvar os dados com INSERT INTO
 app.post('/teste/insertteste', (req, res) => {
     const { nome, email } = req.body;
 
@@ -69,7 +64,6 @@ app.post('/teste/insertteste', (req, res) => {
     });
 });
 
-// PASSO 4: Rota GET para buscar os usuários com SELECT
 app.get('/teste', (req, res) => {
     const sql = "SELECT * FROM users";
 
