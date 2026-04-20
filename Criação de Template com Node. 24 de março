@@ -1,0 +1,93 @@
+# 1. Inicializar o projeto
+npm init -y
+
+# 2. Instalar dependências principais
+npm install express mysql2 express-handlebars
+
+# 3. Instalar dependência de desenvolvimento
+npm install nodemon --save-dev
+
+isso aqui no json:
+
+{
+  "name": "aula21",
+  "version": "1.0.0",
+  "description": "API Persistente com MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "mysql2": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
+
+
+conectar com o banquinho:
+
+const express = require('express');
+const exphbs = require('express-handlebars');
+const mysql = require('mysql2');
+
+const app = express();
+
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+
+app.use(express.static('public')); 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+const conn = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '', 
+    database: 'teste34'
+});
+
+conn.connect((err) => {
+    if (err) {
+        console.error('Erro ao conectar:', err);
+        return;
+    }
+    console.log('Node está conversando com o MySQL!');
+});
+
+app.get('/', (req, res) => {
+    res.render('home');
+});
+
+app.post('/teste/insertteste', (req, res) => {
+    const { nome, email } = req.body;
+    const sql = `INSERT INTO users (nome, email) VALUES (?, ?)`;
+
+    conn.query(sql, [nome, email], (err) => {
+        if (err) return console.log(err);
+        res.redirect('/teste');
+    });
+});
+
+app.get('/teste', (req, res) => {
+    const sql = "SELECT * FROM users";
+
+    conn.query(sql, (err, data) => {
+        if (err) return console.log(err);
+        res.render('teste', { teste: data });
+    });
+});
+
+app.listen(3000);
+
+
+Rodar:
+
+npm start
