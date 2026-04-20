@@ -33,6 +33,8 @@ Lista de Produto (sobre possiveis peças necessárias para desenvolvimento do PI
 Aula - Binários e API
 Configurações Visual Code
 Composição e Reutilização - React
+Estruturação de Projeto
+
 
 
 
