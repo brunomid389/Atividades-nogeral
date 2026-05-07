@@ -40,6 +40,7 @@ Atividade Construção de Tamplete
 Atividade - debugger
 Forms de Fixação 
 Fundamentos de Observabilidade
+Prompt 
 
 Atividades faltantes:
 
@@ -50,5 +51,4 @@ Concatenação Front e Back
 CRUD EDITAR
 Documentação do Projeto
 Criação de Agente de IA
-Prompt 
-
+Código/Slides
