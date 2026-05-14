@@ -42,9 +42,11 @@ Forms de Fixação
 Fundamentos de Observabilidade
 Prompt 
 Criação de Agente de IA
+Aula 01 - Introdução ao Mobile
 
 Atividades faltantes:
 
+Aula 02 - Dart
 Aula- 06- Atividade de Fixação 
 Aula 10 - React Rotas
 Atividade- Complemento do CRUD
