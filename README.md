@@ -43,10 +43,12 @@ Fundamentos de Observabilidade
 Prompt 
 Criação de Agente de IA
 Aula 01 - Introdução ao Mobile
+Aula03- Estrutura de Dados 1 - Introdução 
+Aula 02 - Dart
+
 
 Atividades faltantes:
 
-Aula 02 - Dart
 Aula- 06- Atividade de Fixação 
 Aula 10 - React Rotas
 Atividade- Complemento do CRUD
