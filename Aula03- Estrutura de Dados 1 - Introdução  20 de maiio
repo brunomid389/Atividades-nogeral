@@ -1,0 +1,12 @@
+import 'dart:collection';
+void main() {
+  Queue<String> fila = Queue<String>();
+  fila.add("Ana");
+  fila.add("Bruno");
+  fila.add("Carlos");
+  print("Fila inicial: $fila");
+  String atendido = fila.removeFirst();
+  print("Cliente atendido: $atendido");
+  print("Fila após atendimento: $fila");
+  print("Tamanho final da fila: ${fila.length}");
+}
