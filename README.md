@@ -47,6 +47,7 @@ Aula03- Estrutura de Dados 1 - Introdução
 Aula 02 - Dart
 Usando For e Foreach - Exercício
 Aula 05 - Estrutura de Dados 2
+Aula 05 - Atividade Parte II
 
 
 Atividades faltantes:
