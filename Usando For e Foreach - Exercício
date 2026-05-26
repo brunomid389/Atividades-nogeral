@@ -1,0 +1,61 @@
+void main() {
+  final List<String> produtos = ['Arroz', 'Feijão', 'Macarrão', 'Leite', 'Café'];
+  produtos.add('Açúcar');
+  produtos.add('Óleo');
+  print('--- Lista de produtos (forEach) ---');
+  produtos.forEach((produto) => print(produto));
+  print('\n--- Lista de produtos (for com índice) ---');
+  for (int i = 0; i < produtos.length; i++) {
+    print('Posição $i: ${produtos[i]}');
+  }
+  produtos.remove('Macarrão');
+  print('\nRemovido "Macarrão" pelo nome.');
+  if (produtos.isNotEmpty) {
+    produtos.removeAt(0);
+    print('Removido o item na posição 0.');
+  }
+  print('\nQuantidade final de produtos: ${produtos.length}');
+  if (produtos.isEmpty) {
+    print('A lista está vazia.');
+  } else {
+    print('A lista não está vazia. Produtos restantes: $produtos');
+  }
+}
+
+
+void main() {
+  final List<String> presentes = [];
+  presentes.addAll(['Ana', 'Bruno', 'Carlos', 'Diana', 'Eduardo']);
+  print('--- Lista de alunos presentes (forEach) ---');
+  presentes.forEach((aluno) => print(aluno));
+  print('\n--- Lista numerada de alunos ---');
+  for (int i = 0; i < presentes.length; i++) {
+    print('${i + 1}. ${presentes[i]}');
+  }
+  final String alunoBusca = 'Carlos';
+  if (presentes.contains(alunoBusca)) {
+    print('\nO aluno "$alunoBusca" está presente na aula.');
+  } else {
+    print('\nO aluno "$alunoBusca" não está na lista.');
+  }
+  final String alunoSaiu = 'Bruno';
+  final bool removido = presentes.remove(alunoSaiu);
+  if (removido) {
+    print('\nO aluno "$alunoSaiu" foi removido da lista (saiu da sala).');
+  }
+  print('\nLista atualizada:');
+  print(presentes.join(', '));
+  print('\nTotal de alunos presentes: ${presentes.length}');
+}
+
+
+void main() {
+  final List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 22, 33, 40];
+  print('Original numbers: $numbers');
+  print('Even numbers in the list:');
+  for (final int number in numbers) {
+    if (number % 2 == 0) {
+      print(number);
+    }
+  }
+}
