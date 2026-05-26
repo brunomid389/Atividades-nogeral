@@ -46,6 +46,7 @@ Aula 01 - Introdução ao Mobile
 Aula03- Estrutura de Dados 1 - Introdução 
 Aula 02 - Dart
 Usando For e Foreach - Exercício
+Aula 05 - Estrutura de Dados 2
 
 
 Atividades faltantes:
@@ -59,4 +60,3 @@ Documentação do Projeto
 Código/Slides
 Atividade Criação banco de dados
 Aula 04 - Entrada de Dados
-Aula 05 - Estrutura de Dados 2
