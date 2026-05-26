@@ -1,0 +1,127 @@
+void main() {
+  List<String> nomes = ['Maxine', 'Eleven', 'Carlos', 'milena', 'Eduardo'];
+  for (var i = 0; i < nomes.length; i++) {
+    print(nomes[i]);
+  }
+  nomes.forEach((nome) => print(nome));
+  print(nomes.length);
+  nomes.add('Fábio');
+  nomes.add('Gabriela');
+  print(nomes);
+}
+
+
+void main() {
+  List<int> numeros = [4, 8, 15, 16, 23, 42];
+  for (var i = 0; i < numeros.length; i++) {
+    print('Posição $i: ${numeros[i]}');
+  }
+  for (var i = 0; i < numeros.length; i++) {
+    if (numeros[i] > 10) {
+      print(numeros[i]);
+    }
+  }
+  print(numeros.length);
+}
+
+
+void main() {
+  List<String> frutas = ['Maçã', 'Banana', 'Uva', 'Laranja', 'Melancia'];
+  print(frutas);
+  frutas.remove('Uva');
+  print(frutas);
+  frutas.add('Morango');
+  frutas.forEach((fruta) => print(fruta));
+}
+
+
+void main() {
+  List<String> disciplinas = ['Matemática', 'Português', 'História', 'Geografia', 'Ciências'];
+  for (var i = 0; i < disciplinas.length; i++) {
+    print('Posição $i: ${disciplinas[i]}');
+  }
+  disciplinas.removeAt(2);
+  print(disciplinas);
+  print(disciplinas.length);
+}
+
+
+void main() {
+  List<String> alunos = ['Pedro', 'Maria', 'Lucas', 'Juliana'];
+  String busca = 'Lucas';
+  bool encontrado = false;
+  for (var i = 0; i < alunos.length; i++) {
+    if (alunos[i] == busca) {
+      print('Aluno encontrado na posição $i.');
+      encontrado = true;
+      break;
+    }
+  }
+  if (!encontrado) {
+    print('Aluno não encontrado.');
+  }
+}
+
+
+void main() {
+  List<double> notas = [8.5, 7.0, 9.5, 6.0, 10.0];
+  double soma = 0;
+  for (var i = 0; i < notas.length; i++) {
+    soma += notas[i];
+  }
+  double media = soma / notas.length;
+  print(media);
+  if (media >= 7) {
+    print('Média maior ou igual a 7');
+  } else {
+    print('Média menor que 7');
+  }
+}
+
+
+void main() {
+  List<int> numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  int contadorPares = 0;
+  for (var i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 2 == 0) {
+      print(numeros[i]);
+      contadorPares++;
+    }
+  }
+  print(contadorPares);
+}
+
+
+void main() {
+  List<int> numeros = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  int contadorImpares = 0;
+  numeros.forEach((numero) {
+    if (numero % 2 != 0) {
+      print(numero);
+      contadorImpares++;
+    }
+  });
+  print(contadorImpares);
+}
+
+
+void main() {
+  List<String> tarefas = [];
+  print(tarefas.isEmpty);
+  tarefas.add('Estudar');
+  tarefas.add('Trabalhar');
+  tarefas.add('Treinar');
+  tarefas.add('Limpar');
+  print(tarefas.isEmpty);
+  tarefas.forEach((tarefa) => print(tarefa));
+  print(tarefas.length);
+}
+
+
+void main() {
+  List<int> valores = [10, 20, 30, 40, 50];
+  for (var i = 0; i < valores.length; i++) {
+    valores[i] = valores[i] * 2;
+  }
+  print(valores);
+}
