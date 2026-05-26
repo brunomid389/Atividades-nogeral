@@ -59,3 +59,109 @@ void main() {
     }
   }
 }
+
+
+void main() {
+  final List<String> names = [
+    'Alice',
+    'Bob marley',
+    'Charlie',
+    'Diana',
+    'Eddie'
+  ];
+  names.forEach((String name) {
+    print('Welcome, $name! We are glad to have you here.');
+  });
+}
+
+
+import 'dart:io';
+class GradeManager {
+  final List<double> _grades = [];
+  void addGrade(double grade) {
+    if (grade < 0 || grade > 10) {
+      throw ArgumentError('Nota d.');
+    }
+    _grades.add(grade);
+  }
+  double calculateAverage() {
+    if (_grades.isEmpty) {
+      return 0.0;
+    }
+    final sum = _grades.reduce((a, b) => a + b);
+    return sum / _grades.length;
+  }
+  int get count => _grades.length;
+  List<double> get grades => List.unmodifiable(_grades);
+}
+void main() {
+  final manager = GradeManager();
+  print('--- Sistema de Cálculo de Média da Turma ---');
+  print('Digite as notas dos alunos (digite "fim" para encerrar):');
+  while (true) {
+    stdout.write('Nota ${manager.count + 1}: ');
+    final input = stdin.readLineSync()?.trim().toLowerCase();
+    if (input == 'fim' || input == null) {
+      break;
+    }
+    try {
+      final grade = double.parse(input);
+      manager.addGrade(grade);
+    } catch (e) {
+      print('Erro: Por favor, digite um número válido entre 0 e 10.');
+    }
+  }
+  if (manager.count > 0) {
+    final average = manager.calculateAverage();
+    print('\n--- Resultados ---');
+    print('Total de alunos: ${manager.count}');
+    print('Média da turma: ${average.toStringAsFixed(2)}');
+    if (average >= 7.0) {
+      print('Status: Turma com bom desempenho.');
+    } else {
+      print('Status: Atenção ao desempenho da turma.');
+    }
+  } else {
+    print('\nNenhuma nota foi inserida.');
+  }
+}
+
+
+void main() {
+  final products = [
+    ('Laptop', 1200.0),
+    ('Indisponível', 0.0),
+    ('Mouse', 25.5),
+    ('Indisponível', 0.0),
+    ('Monitor', 300.0),
+    ('Teclado', 45.0),
+  ];
+  print('--- Original List ---');
+  products.forEach(print);
+  products.removeWhere((p) => p.$1 == 'Indisponível');
+  print('\n--- Filtered List ---');
+  products.isEmpty ? print('Vazia') : products.forEach(print);
+}
+
+
+void main() {
+  final ages = [12, 18, 25, 40, 15, 67, 3, 19, 21, 17];
+  final adultCount = ages.where((age) => age >= 18).length;
+
+  print('Total de pessoas: ${ages.length}');
+  print('Pessoas com 18 anos ou mais: $adultCount');
+}
+
+
+void main() {
+  final words = ['dart', 'programacao', 'lista', 'flutter', 'codigo', 'execucao'];
+  words.where((w) => w.length > 5).forEach(print);
+}
+
+
+void main() {
+  final prices = [100.0, 200.0, 50.0, 75.0];
+  for (var i = 0; i < prices.length; i++) {
+    print(prices[i] *= 0.9);
+  }
+}
