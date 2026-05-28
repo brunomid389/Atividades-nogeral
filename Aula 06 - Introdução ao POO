@@ -1,0 +1,102 @@
+class Produto {
+  String nome;
+  double preco;
+  int quantidade
+  Produto(this.nome, this.preco, this.quantidade);
+  void mostrarDados() {
+    print("Produto: $nome | Preço: R\$ $preco | Qtd: $quantidade");
+  }
+  void calcularTotal() {
+    double total = preco * quantidade;
+    print("Total em estoque de $nome: R\$ $total");
+  }
+}
+void main() {
+  Produto p1 = Produto("Notebook", 3500.0, 5);
+  Produto p2 = Produto("Mouse", 80.0, 20);
+  Produto p3 = Produto("Teclado", 250.0, 12);
+  p1.mostrarDados();
+  p1.calcularTotal();
+  p2.mostrarDados();
+  p2.calcularTotal();
+  p3.mostrarDados();
+  p3.calcularTotal();
+}
+
+
+class Equipamento {
+  String nome;
+  String patrimonio;
+  String laboratorio;
+  String status;
+  Equipamento(this.nome, this.patrimonio, this.laboratorio, this.status);
+  void mostrarDados() {
+    print("Equipamento: $nome | Patrimônio: $patrimonio | Lab: $laboratorio | Status: $status");
+  }
+}
+void main() {
+  Equipamento eq1 = Equipamento("Computador", "RE", "Lab 1", "Ativo");
+  Equipamento eq2 = Equipamento("Projetor", "REq", "Lab 2", "Manutenção");
+  Equipamento eq3 = Equipamento("Roteador", "REQi", "Lab 3", "Ativo");
+  eq1.mostrarDados();
+  eq2.mostrarDados();
+  eq3.mostrarDados();
+}
+
+
+class Livro {
+  String titulo;
+  String autor;
+  int anoPublicacao;
+  Livro(this.titulo, this.autor, this.anoPublicacao);
+  void mostrarDados() {
+    print("Livro: $titulo | Autor: $autor | Ano: $anoPublicacao");
+  }
+}
+
+
+class Funcionario {
+  String nome;
+  String cargo;
+  double salario;
+  Funcionario(this.nome, this.cargo, this.salario);
+  void mostrarFuncionario() {
+    print("Funcionário: $nome | Cargo: $cargo | Salário: R\$ $salario");
+  }
+}
+
+
+class Personagem {
+  String nome;
+  int vida;
+  int forca;
+  Personagem(this.nome, this.vida, this.forca);
+  void atacar() {
+    print("$nome realizou um ataque com força $forca!");
+  }
+}
+
+
+class Celular {
+  String marca;
+  String modelo;
+  int armazenamento;
+  Celular(this.marca, this.modelo, this.armazenamento);
+  void mostrarDados() {
+    print("Celular: $marca $modelo | Memória: ${armazenamento}GB");
+  }
+}
+void main() {
+  Celular c1 = Celular("Apple", "iPhone 15", 128);
+  Celular c2 = Celular("Samsung", "Galaxy S24", 256);
+  c1.mostraDados();
+  c2.mostrarDados();
+}
+
+
+class Curso {
+  String nome;
+  int cargaHoraria;
+  String professor;
+  Curso(this.nome, this.cargaHoraria, this.professor);
+}
