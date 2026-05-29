@@ -1,0 +1,266 @@
+class Produto{
+  String nome;
+  double _preco;
+  int _qtd;
+  Produto(this.nome,this._preco,this._qtd);
+  set preco(double v)=>v>0?_preco=v:print("Preço inválido");
+  set qtd(int v)=>v>=0?_qtd=v:print("Qtd inválida");
+  double total()=>_preco*_qtd;
+  void mostrar()=>print("$nome $_preco $_qtd");
+}
+void main(){
+  var p1=Produto("Mouse",50,2);
+  var p2=Produto("Teclado",100,1);
+  var p3=Produto("Monitor",900,3);
+  p1.preco=-1;
+  p2.qtd=-5;
+  p1.mostrar();
+  print(p1.total());
+}
+
+
+class Produto{
+  String nome;
+  double preco;
+  int qtd;
+  Produto(this.nome,this.preco,this.qtd);
+  double total()=>preco*qtd;
+}
+void main(){
+  List p=[
+    Produto("Mouse",50,2),
+    Produto("Teclado",100,1),
+    Produto("Monitor",900,3),
+    Produto("Cabo",20,5),
+    Produto("Notebook",2500,1)
+  ];
+  for(var i in p){
+    print("${i.nome} ${i.total()}");
+  }
+  print(p.length);
+}
+
+
+class Produto{
+  String nome;
+  Produto(this.nome);
+}
+void main(){
+  List p=[
+    Produto("Mouse"),
+    Produto("Teclado"),
+    Produto("Monitor")
+  ];
+  String busca="Monitor";
+  for(var i in p){
+    if(i.nome==busca){
+      print(i.nome);
+      break;
+    }
+  }
+}
+
+
+class Produto{
+  String nome;
+  Produto(this.nome);
+}
+void main(){
+  List p=[
+    Produto("Mouse"),
+    Produto("Teclado"),
+    Produto("Monitor")
+  ];
+  print("Antes");
+  for(var i in p) print(i.nome);
+  p.removeWhere((i)=>i.nome=="Teclado");
+  print("Depois");
+  for(var i in p) print(i.nome);
+}
+
+
+class Aluno{
+  String nome;
+  double _nota;
+  Aluno(this.nome,this._nota);
+  set nota(double v){
+    if(v>=0&&v<=10)_nota=v;
+    else print("Nota inválida");
+  }
+  String sit(){
+    if(_nota>=7)return "Aprovado";
+    if(_nota>=5)return "Recuperação";
+    return "Reprovado";
+  }
+  void mostrar()=>print("$nome $_nota ${sit()}");
+}
+void main(){
+  var a1=Aluno("Ana",8);
+  var a2=Aluno("Carlos",6);
+  var a3=Aluno("Pedro",3);
+  a1.nota=15;
+  a1.mostrar();
+  a2.mostrar();
+  a3.mostrar();
+}
+
+
+
+class Aluno{
+  String nome;
+  double nota;
+  Aluno(this.nome,this.nota);
+  String sit(){
+    if(nota>=7)return "Aprovado";
+    if(nota>=5)return "Recuperação";
+    return "Reprovado";
+  }
+}
+void main(){
+  List a=[
+    Aluno("Ana",8),
+    Aluno("Carlos",6),
+    Aluno("Pedro",3),
+    Aluno("Maria",9),
+    Aluno("João",4)
+  ];
+  for(var i in a){
+    print("${i.nome} ${i.sit()}");
+  }
+}
+
+
+
+class No{
+  int _v;
+  No? esq,dir;
+  No(this._v);
+  int get valor=>_v;
+  set valor(int v){
+    if(v>=0)_v=v;
+  }
+}
+void main(){
+  var r=No(20);
+  r.esq=No(10);
+  r.dir=No(30);
+  print(r.valor);
+  print(r.esq!.valor);
+  print(r.dir!.valor);
+}
+
+
+
+class No{
+  int v;
+  No? e,d;
+  No(this.v);
+}
+class Arvore{
+  No? r;
+  No add(No? n,int v){
+    if(n==null)return No(v);
+    if(v<n.v)n.e=add(n.e,v);
+    else n.d=add(n.d,v);
+     return n;
+  }
+  void inserir(int v){
+    r=add(r,v);
+  }
+}
+void main(){
+  var a=Arvore();
+  [50,30,70,20,40,60,80]
+      .forEach((i)=>a.inserir(i));
+}
+
+
+
+
+class No{
+  int v;
+  No? e,d;
+  No(this.v);
+}
+class Arvore{
+  No? r;
+  No add(No? n,int v){
+    if(n==null)return No(v);
+    if(v<n.v)n.e=add(n.e,v);
+    else n.d=add(n.d,v);
+    return n;
+  }
+  void inserir(int v)=>r=add(r,v);
+  void ordem(No? n){
+    if(n!=null){
+      ordem(n.e);
+      print(n.v);
+      ordem(n.d);
+    }
+  }
+}
+void main(){
+  var a=Arvore();
+  [50,30,70,20,40,60,80]
+      .forEach((i)=>a.inserir(i));
+  a.ordem(a.r);
+}
+
+
+
+
+class Produto{
+  String nome;
+  double _p;
+  int _q;
+  Produto(this.nome,this._p,this._q);
+  double get preco=>_p;
+  set preco(double v){
+    if(v>0)_p=v;
+    else print("Preço inválido");
+  }
+
+  set qtd(int v){
+    if(v>=0)_q=v;
+    else print("Qtd inválida");
+  }
+  void mostrar()=>print("$nome $_p $_q");
+}
+class No{
+  double v;
+  No? e,d;
+  No(this.v);
+}
+class Arvore{
+  No? r;
+  No add(No? n,double v){
+    if(n==null)return No(v);
+    if(v<n.v)n.e=add(n.e,v);
+    else n.d=add(n.d,v);
+    return n;
+  }
+  void inserir(double v)=>r=add(r,v);
+  void ordem(No? n){
+    if(n!=null){
+      ordem(n.e);
+      print(n.v);
+      ordem(n.d);
+    }
+  }
+}
+void main(){
+  List p=[
+    Produto("Mouse",50,2),
+    Produto("Teclado",120,1),
+    Produto("Monitor",900,3),
+    Produto("Cabo",35,5),
+    Produto("Notebook",2500,1)
+  ];
+  var a=Arvore();
+  for(var i in p){
+    a.inserir(i.preco);
+    i.mostrar();
+  }
+  print("Preços:");
+  a.ordem(a.r);
+}
