@@ -49,7 +49,7 @@ Usando For e Foreach - Exercício
 Aula 05 - Estrutura de Dados 2
 Aula 05 - Atividade Parte II
 Aula 06 - Introdução ao POO
-
+Aula 08 - Herança e Sobrescrita de Métodos
 
 Atividades faltantes:
 
