@@ -1,0 +1,14 @@
+import 'dart:io';
+abstract class Deposito{void executar();}
+class Gerente extends Deposito{@override void executar()=>print('Gerente');}
+class Caixa extends Deposito{@override void executar()=>print('Caixa');}
+class Atendente extends Deposito{@override void executar()=>print('Atendente');}
+void main(){
+print('1-Gerente\n2-Caixa\n3-Atendente');
+var op=stdin.readLineSync();
+Deposito? f;
+if(op=='1')f=Gerente();
+if(op=='2')f=Caixa();
+if(op=='3')f=Atendente();
+f?.executar();
+}
