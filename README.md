@@ -51,6 +51,7 @@ Aula 05 - Atividade Parte II
 Aula 06 - Introdução ao POO
 Aula 08 - Herança e Sobrescrita de Métodos
 Aula 10 - Lista de Objetos e Mini Sistema POO
+Envio do Repositório P.I dia 02/06
 
 Atividades faltantes:
 
@@ -63,3 +64,5 @@ Documentação do Projeto
 Código/Slides
 Atividade Criação banco de dados
 Aula 04 - Entrada de Dados
+Aula 07 - Encapsulamento, Getters e Setters
+Aula 09 - Polimorfismo e Classes Abstratas
