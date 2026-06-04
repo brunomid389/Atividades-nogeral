@@ -1,0 +1,38 @@
+class Aluno {
+  String nome;
+  double n1, n2, n3;
+  Aluno(this.nome, this.n1, this.n2, this.n3);
+  double get media => (n1 + n2 + n3) / 3;
+  String get situacao {
+    if (media >= 7) return "Aprovado";
+    if (media >= 5) return "Recuperação";
+    return "Reprovado";
+  }
+}
+void main() {
+  List<List<Aluno>> turmas = List.generate(
+    4,
+    (t) => List.generate(
+      20,
+      (a) => Aluno(
+        "Aluno ${a + 1}",
+        4 + (a % 7).toDouble(),
+        5 + (a % 6).toDouble(),
+        3 + (a % 8).toDouble(),
+      ),
+    ),
+  );
+  for (int i = 0; i < turmas.length; i++) {
+    print("\nTurma ${i + 1}");
+    for (var aluno in turmas[i]) {
+      print(
+        "${aluno.nome} | "
+        "N1:${aluno.n1} "
+        "N2:${aluno.n2} "
+        "N3:${aluno.n3} | "
+        "Média:${aluno.media.toStringAsFixed(1)} | "
+        "${aluno.situacao}",
+      );
+    }
+  }
+}
