@@ -54,6 +54,8 @@ Aula 10 - Lista de Objetos e Mini Sistema POO
 Envio do Repositório P.I dia 02/06
 Flutter Aula 2.1
 Aula 02 - Flutter
+Aula Flutter 2.2
+
 
 Atividades faltantes:
 
