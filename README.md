@@ -52,6 +52,8 @@ Aula 06 - Introdução ao POO
 Aula 08 - Herança e Sobrescrita de Métodos
 Aula 10 - Lista de Objetos e Mini Sistema POO
 Envio do Repositório P.I dia 02/06
+Flutter Aula 2.1
+Aula 02 - Flutter
 
 Atividades faltantes:
 
@@ -66,3 +68,6 @@ Atividade Criação banco de dados
 Aula 04 - Entrada de Dados
 Aula 07 - Encapsulamento, Getters e Setters
 Aula 09 - Polimorfismo e Classes Abstratas
+Flutter - Aula 01.1
+Flutter - Aula 01
+Proposta comercial
