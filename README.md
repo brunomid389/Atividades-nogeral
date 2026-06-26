@@ -56,7 +56,8 @@ Flutter Aula 2.1
 Aula 02 - Flutter
 Aula Flutter 2.2
 Proposta comercial
-Aula 04 - Flutter - Comparando HTML com Flutter
+Estilos de texto no Flutter e Material 3
+
 
 Atividades faltantes:
 
