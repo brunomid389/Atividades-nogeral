@@ -55,7 +55,8 @@ Envio do Repositório P.I dia 02/06
 Flutter Aula 2.1
 Aula 02 - Flutter
 Aula Flutter 2.2
-
+Proposta comercial
+Aula 04 - Flutter - Comparando HTML com Flutter
 
 Atividades faltantes:
 
@@ -72,4 +73,4 @@ Aula 07 - Encapsulamento, Getters e Setters
 Aula 09 - Polimorfismo e Classes Abstratas
 Flutter - Aula 01.1
 Flutter - Aula 01
-Proposta comercial
+
