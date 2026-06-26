@@ -59,7 +59,7 @@ Proposta comercial
 Estilos de texto no Flutter e Material 3
 Aula 04 - Flutter - Comparando HTML com Flutter
 Construção de Interface
-
+Flutter - Aula 01
 
 Atividades faltantes:
 
@@ -75,5 +75,3 @@ Aula 04 - Entrada de Dados
 Aula 07 - Encapsulamento, Getters e Setters
 Aula 09 - Polimorfismo e Classes Abstratas
 Flutter - Aula 01.1
-Flutter - Aula 01
-
