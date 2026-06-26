@@ -1,0 +1,86 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MeuApp());
+}
+
+class MeuApp extends StatelessWidget {
+  const MeuApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Exemplo',
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey.shade100,
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Text(
+                'Teliinha',
+                style: TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.indigo,
+                  letterSpacing: 1.2,
+                ),
+              ),
+              SizedBox(height: 12),
+              Text(
+                'Só isso',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                  height: 1.5,
+                ),
+              ),
+              SizedBox(height: 30),
+              Text(
+                'Yes',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.deepPurple,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Texto bonitinho',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.teal,
+                ),
+              ),
+              SizedBox(height: 24),
+              Text(
+                'Obrigado por ver isto.',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                  letterSpacing: 0.8,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
