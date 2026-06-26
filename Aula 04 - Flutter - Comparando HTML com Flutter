@@ -1,0 +1,9 @@
+| HTML                                     | Flutter       |
+| ---------------------------------------- | ------------- |
+| `<html>`                                 | `MaterialApp` |
+| `<body>`                                 | `Scaffold`    |
+| `<header>`                               | `AppBar`      |
+| `<div>`                                  | `Container`   |
+| `<p>` ou `<span>`                        | `Text`        |
+| `display: flex; flex-direction: column;` | `Column`      |
+| CSS                                      | `TextStyle`   |
