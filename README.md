@@ -1,7 +1,7 @@
 # Atividades-atrasadas
 Para entregar as atividades atrasadas do professor Italo da matéria de Educação Profissional.
 
-atividades feitas esse anos:
+atividades feitas esse ano:
 
 Entrega da Interface da Prototipagem do P.I (Frontend PI)
 Front e Back juntos 
@@ -57,6 +57,7 @@ Aula 02 - Flutter
 Aula Flutter 2.2
 Proposta comercial
 Estilos de texto no Flutter e Material 3
+Aula 04 - Flutter - Comparando HTML com Flutter
 
 
 Atividades faltantes:
