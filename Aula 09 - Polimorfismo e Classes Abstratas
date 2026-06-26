@@ -1,0 +1,78 @@
+void main() {
+  Funcionario professor = Professor(
+    nome: "Carlos",
+    salarioBase: 5000,
+  );
+
+  Funcionario coordenador = Coordenador(
+    nome: "Mariana",
+    salarioBase: 6000,
+  );
+
+  Funcionario estagiario = Estagiario(
+    nome: "Lucas",
+    salarioBase: 1500,
+  );
+
+  professor.calcularSalario();
+  coordenador.calcularSalario();
+  estagiario.calcularSalario();
+}
+
+// Classe base
+abstract class Funcionario {
+  String nome;
+  double salarioBase;
+
+  Funcionario({
+    required this.nome,
+    required this.salarioBase,
+  });
+
+  void calcularSalario();
+}
+
+// Professor
+class Professor extends Funcionario {
+  Professor({
+    required String nome,
+    required double salarioBase,
+  }) : super(nome: nome, salarioBase: salarioBase);
+
+  @override
+  void calcularSalario() {
+    double salario = salarioBase + 1000;
+    print("Professor: $nome");
+    print("Salário: R\$ ${salario.toStringAsFixed(2)}\n");
+  }
+}
+
+// Coordenador
+class Coordenador extends Funcionario {
+  Coordenador({
+    required String nome,
+    required double salarioBase,
+  }) : super(nome: nome, salarioBase: salarioBase);
+
+  @override
+  void calcularSalario() {
+    double salario = salarioBase * 1.20;
+    print("Coordenador: $nome");
+    print("Salário: R\$ ${salario.toStringAsFixed(2)}\n");
+  }
+}
+
+// Estagiário
+class Estagiario extends Funcionario {
+  Estagiario({
+    required String nome,
+    required double salarioBase,
+  }) : super(nome: nome, salarioBase: salarioBase);
+
+  @override
+  void calcularSalario() {
+    double salario = salarioBase;
+    print("Estagiário: $nome");
+    print("Salário: R\$ ${salario.toStringAsFixed(2)}\n");
+  }
+}
