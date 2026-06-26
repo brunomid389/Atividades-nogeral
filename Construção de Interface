@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.lightBlueAccent,
+        appBar: AppBar(
+          title: const Text("Aula de Flutter"),
+          backgroundColor: Colors.blue,
+        ),
+        body: const Center(
+          child: Text(
+            "Agora é no VS Code",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.indigo,
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
