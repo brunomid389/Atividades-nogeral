@@ -63,6 +63,7 @@ Flutter - Aula 01
 Códigos
 Navegação entre telas 
 Flutter Arquitetura
+Códigos e Slide
 
 Atividades faltantes:
 
