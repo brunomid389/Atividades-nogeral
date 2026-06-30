@@ -62,7 +62,7 @@ Construção de Interface
 Flutter - Aula 01
 Códigos
 Navegação entre telas 
-
+Flutter Arquitetura
 
 Atividades faltantes:
 
@@ -78,4 +78,3 @@ Aula 04 - Entrada de Dados
 Aula 07 - Encapsulamento, Getters e Setters
 Aula 09 - Polimorfismo e Classes Abstratas
 Flutter - Aula 01.1
-Flutter Arquitetura
