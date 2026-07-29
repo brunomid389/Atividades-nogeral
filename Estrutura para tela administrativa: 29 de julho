@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: Tela()));
+}
+
+class Tela extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Gerenciamento de Usuários"),
+        actions: [
+          TextButton(onPressed: () {}, child: Text("Adicionar")),
+          TextButton(onPressed: () {}, child: Text("Exportar")),
+          TextButton(onPressed: () {}, child: Text("Atualizar")),
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Center(child: Text("Aluno")),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.logout),
+          ),
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            ListTile(title: Text("Dashboard")),
+            ListTile(title: Text("Usuários")),
+            ListTile(title: Text("Produtos")),
+            ListTile(title: Text("Relatórios")),
+            ListTile(title: Text("Configurações")),
+            ListTile(title: Text("Auditoria")),
+          ],
+        ),
+      ),
+      body: Center(
+        child: Text("Sistema"),
+      ),
+    );
+  }
+}
