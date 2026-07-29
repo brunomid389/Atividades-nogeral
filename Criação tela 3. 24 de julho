@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: Tela()));
+}
+
+class Tela extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: Drawer(),
+      appBar: AppBar(
+        actions: [
+          Icon(Icons.menu),
+        ],
+      ),
+      body: ListView(
+        children: [
+          Text("IP: 192.168.0.1"),
+          Text("Usuário: João"),
+          Text("29/07/2026 10:30:15"),
+          Text("Cadastro realizado"),
+          Divider(),
+          Text("IP: 192.168.0.2"),
+          Text("Usuário: Maria"),
+          Text("29/07/2026 11:20:50"),
+          Text("Produto alterado"),
+        ],
+      ),
+    );
+  }
+}
