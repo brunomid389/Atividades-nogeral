@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: A()));
+}
+
+class A extends StatelessWidget {
+  final k = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Cadastro")),
+      body: Form(
+        key: k,
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(labelText: "Nome"),
+                validator: (v) => v!.isEmpty ? "Digite o nome" : null,
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: "E-mail"),
+                keyboardType: TextInputType.emailAddress,
+                validator: (v) => v!.contains("@") ? null : "Inválido",
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: "Telefone"),
+                keyboardType: TextInputType.phone,
+                validator: (v) => v!.length >= 8 ? null : "Inválido",
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: "Senha"),
+                obscureText: true,
+                validator: (v) => v!.length >= 6 ? null : "Muito curta",
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  if (k.currentState!.validate()) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text("OK")),
+                    );
+                  }
+                },
+                child: Text("Cadastrar"),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
