@@ -1,0 +1,103 @@
+contato:
+
+import 'package:flutter/material.dart';
+
+class ContatoPage extends StatelessWidget {
+  ContatoPage({super.key});
+
+  final nome = TextEditingController();
+  final telefone = TextEditingController();
+  final mensagem = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Contato')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            TextField(controller: nome, decoration: const InputDecoration(labelText: 'Nome')),
+            TextField(controller: telefone, decoration: const InputDecoration(labelText: 'Telefone')),
+            TextField(
+              controller: mensagem,
+              decoration: const InputDecoration(labelText: 'Mensagem'),
+              maxLines: 4,
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Enviar'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+termos:
+
+import 'package:flutter/material.dart';
+
+class TermosUsoPage extends StatefulWidget {
+  const TermosUsoPage({super.key});
+
+  @override
+  State<TermosUsoPage> createState() => _TermosUsoPageState();
+}
+
+class _TermosUsoPageState extends State<TermosUsoPage> {
+  bool aceitou = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Termos de Uso')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            const Expanded(
+              child: SingleChildScrollView(
+                child: Text(''),
+              ),
+            ),
+            CheckboxListTile(
+              value: aceitou,
+              onChanged: (v) => setState(() => aceitou = v!),
+              title: const Text('Aceito os termos'),
+            ),
+            ElevatedButton(
+              onPressed: aceitou ? () {} : null,
+              child: const Text('Continuar'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+privacy:
+
+import 'package:flutter/material.dart';
+
+class PoliticaPrivacidadePage extends StatelessWidget {
+  const PoliticaPrivacidadePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Política de Privacidade')),
+      body: const Padding(
+        padding: EdgeInsets.all(16),
+        child: SingleChildScrollView(
+          child: Text(''),
+        ),
+      ),
+    );
+  }
+}
