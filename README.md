@@ -64,6 +64,15 @@ Códigos
 Navegação entre telas 
 Flutter Arquitetura
 Códigos e Slide
+Assuntos da Avaliação dia 11/08
+Estrutura para tela administrativa
+Criação tela 3 / enviada no comentário
+Atividade 2 - Criação de telas / enviada no comentário
+Atividade de Tela 01 / enviada no comentário
+01_ Fundamentos de Formulários em Aplicações Mobile
+Criação de Interface 
+Atividade de Lista
+
 
 Atividades faltantes:
 
@@ -79,3 +88,10 @@ Aula 04 - Entrada de Dados
 Aula 07 - Encapsulamento, Getters e Setters
 Aula 09 - Polimorfismo e Classes Abstratas
 Flutter - Aula 01.1
+Exercício de Avaliação
+Versionamento
+Entrega das Telas Mobile em Flutter do projeto Integrador 
+Criando APK com troca de Imagens e Nome de aplicativo
+Criando APK com troca de Imagens e Nome de aplicativo
+Atividade de Construção
+
