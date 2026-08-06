@@ -72,7 +72,7 @@ Atividade de Tela 01 / enviada no comentário
 01_ Fundamentos de Formulários em Aplicações Mobile
 Criação de Interface 
 Atividade de Lista
-
+Exercício de Avaliação
 
 Atividades faltantes:
 
@@ -88,7 +88,6 @@ Aula 04 - Entrada de Dados
 Aula 07 - Encapsulamento, Getters e Setters
 Aula 09 - Polimorfismo e Classes Abstratas
 Flutter - Aula 01.1
-Exercício de Avaliação
 Versionamento
 Entrega das Telas Mobile em Flutter do projeto Integrador 
 Criando APK com troca de Imagens e Nome de aplicativo
