@@ -1,0 +1,36 @@
+abstract class Personagem {
+  String nome;
+
+  Personagem(this.nome);
+
+  void atacar();
+}
+
+class Mago extends Personagem {
+  Mago(String nome) : super(nome);
+
+  @override
+  void atacar() {
+    print('$nome lançou uma bola de fogo!');
+  }
+}
+
+class Guerreiro extends Personagem {
+  Guerreiro(String nome) : super(nome);
+
+  @override
+  void atacar() {
+    print('$nome deu um golpe de espada!');
+  }
+}
+
+void main() {
+  List<Personagem> grupo = [
+    Mago('Merlin'),
+    Guerreiro('Arthur'),
+  ];
+
+  for (var personagem in grupo) {
+    personagem.atacar();
+  }
+}
