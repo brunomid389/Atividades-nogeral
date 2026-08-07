@@ -1,3 +1,4 @@
+1
 class Produto {
   String nome;
   double preco;
@@ -23,7 +24,7 @@ void main() {
   p3.calcularTotal();
 }
 
-
+2
 class Equipamento {
   String nome;
   String patrimonio;
@@ -43,7 +44,7 @@ void main() {
   eq3.mostrarDados();
 }
 
-
+3
 class Livro {
   String titulo;
   String autor;
@@ -54,7 +55,7 @@ class Livro {
   }
 }
 
-
+4
 class Funcionario {
   String nome;
   String cargo;
@@ -65,7 +66,7 @@ class Funcionario {
   }
 }
 
-
+5
 class Personagem {
   String nome;
   int vida;
@@ -76,7 +77,7 @@ class Personagem {
   }
 }
 
-
+6
 class Celular {
   String marca;
   String modelo;
@@ -93,7 +94,7 @@ void main() {
   c2.mostrarDados();
 }
 
-
+7
 class Curso {
   String nome;
   int cargaHoraria;
