@@ -1,0 +1,158 @@
+// 1
+class Produto {
+  String _nome;
+  double _preco;
+  int _quantidade;
+
+  Produto(this._nome, this._preco, this._quantidade);
+
+  String get nome => _nome;
+  set nome(String valor) => _nome = valor;
+
+  double get preco => _preco;
+  set preco(double valor) => _preco = valor;
+
+  int get quantidade => _quantidade;
+  set quantidade(int valor) => _quantidade = valor;
+
+  void mostrarDados() {
+    print("Produto: $_nome | Preço: R\$ $_preco | Qtd: $_quantidade");
+  }
+
+  void calcularTotal() {
+    double total = _preco * _quantidade;
+    print("Total em estoque de $_nome: R\$ $total");
+  }
+}
+
+// 2
+class Equipamento {
+  String _nome;
+  String _patrimonio;
+  String _laboratorio;
+  String _status;
+
+  Equipamento(this._nome, this._patrimonio, this._laboratorio, this._status);
+
+  String get nome => _nome;
+  set nome(String valor) => _nome = valor;
+
+  String get patrimonio => _patrimonio;
+  set patrimonio(String valor) => _patrimonio = valor;
+
+  String get laboratorio => _laboratorio;
+  set laboratorio(String valor) => _laboratorio = valor;
+
+  String get status => _status;
+  set status(String valor) => _status = valor;
+
+  void mostrarDados() {
+    print("Equipamento: $_nome | Patrimônio: $_patrimonio | Lab: $_laboratorio | Status: $_status");
+  }
+}
+
+// 3
+class Livro {
+  String _titulo;
+  String _autor;
+  int _anoPublicacao;
+
+  Livro(this._titulo, this._autor, this._anoPublicacao);
+
+  String get titulo => _titulo;
+  set titulo(String valor) => _titulo = valor;
+
+  String get autor => _autor;
+  set autor(String valor) => _autor = valor;
+
+  int get anoPublicacao => _anoPublicacao;
+  set anoPublicacao(int valor) => _anoPublicacao = valor;
+
+  void mostrarDados() {
+    print("Livro: $_titulo | Autor: $_autor | Ano: $_anoPublicacao");
+  }
+}
+
+// 4
+class Funcionario {
+  String _nome;
+  String _cargo;
+  double _salario;
+
+  Funcionario(this._nome, this._cargo, this._salario);
+
+  String get nome => _nome;
+  set nome(String valor) => _nome = valor;
+
+  String get cargo => _cargo;
+  set cargo(String valor) => _cargo = valor;
+
+  double get salario => _salario;
+  set salario(double valor) => _salario = valor;
+
+  void mostrarFuncionario() {
+    print("Funcionário: $_nome | Cargo: $_cargo | Salário: R\$ $_salario");
+  }
+}
+
+// 5
+class Personagem {
+  String _nome;
+  int _vida;
+  int _forca;
+
+  Personagem(this._nome, this._vida, this._forca);
+
+  String get nome => _nome;
+  set nome(String valor) => _nome = valor;
+
+  int get vida => _vida;
+  set vida(int valor) => _vida = valor;
+
+  int get forca => _forca;
+  set forca(int valor) => _forca = valor;
+
+  void atacar() {
+    print("$_nome realizou um ataque com força $_forca!");
+  }
+}
+
+// 6
+class Celular {
+  String _marca;
+  String _modelo;
+  int _armazenamento;
+
+  Celular(this._marca, this._modelo, this._armazenamento);
+
+  String get marca => _marca;
+  set marca(String valor) => _marca = valor;
+
+  String get modelo => _modelo;
+  set modelo(String valor) => _modelo = valor;
+
+  int get armazenamento => _armazenamento;
+  set armazenamento(int valor) => _armazenamento = valor;
+
+  void mostrarDados() {
+    print("Celular: $_marca $_modelo | Memória: ${_armazenamento}GB");
+  }
+}
+
+// 7
+class Curso {
+  String _nome;
+  int _cargaHoraria;
+  String _professor;
+
+  Curso(this._nome, this._cargaHoraria, this._professor);
+
+  String get nome => _nome;
+  set nome(String valor) => _nome = valor;
+
+  int get cargaHoraria => _cargaHoraria;
+  set cargaHoraria(int valor) => _cargaHoraria = valor;
+
+  String get professor => _professor;
+  set professor(String valor) => _professor = valor;
+}
