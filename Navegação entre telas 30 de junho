@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MaterialApp(
+    home: TelaA(),
+  ));
+}
+
+class TelaA extends StatelessWidget {
+  const TelaA({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Tá dificil')),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const TelaB()),
+            );
+          },
+          child: const Text('minha amiga'),
+        ),
+      ),
+    );
+  }
+}
+
+class TelaB extends StatelessWidget {
+  const TelaB({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('só se for')),
+      body: Center(
+        child: OutlinedButton(
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const TelaC()),
+            );
+          },
+          child: const Text('fala mesmo'),
+        ),
+      ),
+    );
+  }
+}
+
+class TelaC extends StatelessWidget {
+  const TelaC({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('fla mesmo')),
+      body: Center(
+        child: TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('é isso ai'),
+        ),
+      ),
+    );
+  }
+}
