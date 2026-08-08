@@ -78,6 +78,7 @@ Aula 07 - Encapsulamento, Getters e Setters
 Aula 09 - Polimorfismo e Classes Abstratas
 Aula 04 - Entrada de Dados
 Flutter - Aula 01.1
+Atividades em atraso
 
 Atividades faltantes:
 
@@ -89,6 +90,7 @@ CRUD EDITAR
 Documentação do Projeto
 Código/Slides
 Atividade Criação banco de dados
+
 Versionamento
 Entrega das Telas Mobile em Flutter do projeto Integrador 
 Criando APK com troca de Imagens e Nome de aplicativo
