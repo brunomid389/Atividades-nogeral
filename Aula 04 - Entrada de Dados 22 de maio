@@ -1,0 +1,186 @@
+1.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Nome:");
+  String nome = stdin.readLineSync()!;
+
+  print("Turma:");
+  String turma = stdin.readLineSync()!;
+
+  print("Idade:");
+  int idade = int.parse(stdin.readLineSync()!);
+
+  print("Nota 1:");
+  double nota1 = double.parse(stdin.readLineSync()!);
+
+  print("Nota 2:");
+  double nota2 = double.parse(stdin.readLineSync()!);
+
+  double media = (nota1 + nota2) / 2;
+
+  print("Nome: $nome");
+  print("Turma: $turma");
+  print("Idade: $idade");
+  print("Nota 1: $nota1");
+  print("Nota 2: $nota2");
+  print("Média: $media");
+
+  if (media >= 7) {
+    print("Aprovado");
+  } else {
+    print("Recuperação");
+  }
+}
+```
+
+2.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Digite seu nome:");
+  String nome = stdin.readLineSync()!;
+
+  print("Olá, $nome!");
+}
+```
+
+3.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Digite sua idade:");
+  int idade = int.parse(stdin.readLineSync()!);
+
+  print("No próximo ano você terá ${idade + 1} anos.");
+}
+```
+
+4.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Digite um número:");
+  int n1 = int.parse(stdin.readLineSync()!);
+
+  print("Digite outro número:");
+  int n2 = int.parse(stdin.readLineSync()!);
+
+  print("Soma: ${n1 + n2}");
+}
+```
+
+5.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Nota 1:");
+  double n1 = double.parse(stdin.readLineSync()!);
+
+  print("Nota 2:");
+  double n2 = double.parse(stdin.readLineSync()!);
+
+  double media = (n1 + n2) / 2;
+
+  print("Média: $media");
+}
+```
+
+6.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Digite o valor do produto:");
+  double valor = double.parse(stdin.readLineSync()!);
+
+  double desconto = valor * 0.10;
+  double total = valor - desconto;
+
+  print("Valor com desconto: $total");
+}
+```
+
+7.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Digite sua idade:");
+  int idade = int.parse(stdin.readLineSync()!);
+
+  if (idade >= 16) {
+    print("Pode votar.");
+  } else {
+    print("Não pode votar.");
+  }
+}
+```
+
+8.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Nome:");
+  String nome = stdin.readLineSync()!;
+
+  print("Curso:");
+  String curso = stdin.readLineSync()!;
+
+  print("Matrícula:");
+  String matricula = stdin.readLineSync()!;
+
+  print("Nome: $nome");
+  print("Curso: $curso");
+  print("Matrícula: $matricula");
+}
+```
+
+9.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Digite três números:");
+
+  double n1 = double.parse(stdin.readLineSync()!);
+  double n2 = double.parse(stdin.readLineSync()!);
+  double n3 = double.parse(stdin.readLineSync()!);
+
+  double media = (n1 + n2 + n3) / 3;
+
+  print("Média: $media");
+}
+```
+
+10.
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Digite a senha:");
+  String senha = stdin.readLineSync()!;
+
+  if (senha == "1234") {
+    print("Senha correta");
+  } else {
+    print("Senha incorreta");
+  }
+}
+```
