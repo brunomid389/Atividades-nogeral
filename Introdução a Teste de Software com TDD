@@ -1,0 +1,119 @@
+import 'package:test/test.dart';
+import '../lib/boletim.dart';
+
+void main() {
+  test('media 8 e 6', () {
+    expect(calcularMedia(8, 6), 7);
+  });
+
+  test('media 10 e 8', () {
+    expect(calcularMedia(10, 8), 9);
+  });
+
+  test('nota menor que 0', () {
+    expect(() => calcularMedia(-1, 8), throwsArgumentError);
+  });
+
+  test('nota maior que 10', () {
+    expect(() => calcularMedia(8, 11), throwsArgumentError);
+  });
+
+  test('media 7', () {
+    expect(verificarSituacao(7), 'Aprovado');
+  });
+
+  test('media maior que 7', () {
+    expect(verificarSituacao(8), 'Aprovado');
+  });
+
+  test('media menor que 7', () {
+    expect(verificarSituacao(6), 'Reprovado');
+  });
+
+  test('recuperacao', () {
+    expect(verificarSituacao(6), 'Recuperação');
+  });
+}
+```
+
+outra coisa:
+
+
+double calcularMedia(double nota1, double nota2) {
+  if (nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10) {
+    throw ArgumentError();
+  }
+  return (nota1 + nota2) / 2;
+}
+
+String verificarSituacao(double media) {
+  if (media >= 7) {
+    return 'Aprovado';
+  }
+  if (media >= 5) {
+    return 'Recuperação';
+  }
+  return 'Reprovado';
+}
+
+
+
+para executar:
+
+dart test
+
+
+
+
+Perguntinhas:
+
+O primeiro teste foi o da média entre 8 e 6, que deveria dar 7.
+Sim.
+Porque as funções ainda não existiam.
+Criei as funções no arquivo boletim.dart.
+Testar um resultado verifica se a resposta está certa. Testar um erro verifica se o sistema rejeita algo errado.
+É quando o teste ainda está falhando.
+É quando o teste passa.
+Porque ajuda a organizar e verificar o código aos poucos.
+Fazer os testes de erro.
+Poderia aplicar em um sistema de cadastro de alunos.
+
+
+atividade validação da senha:
+
+teste:
+
+import 'package:test/test.dart';
+import '../lib/senha.dart';
+
+void main() {
+  test('tem letra maiúscula', () {
+    expect(validarSenha('Senha123'), true);
+  });
+
+  test('tem 8 caracteres', () {
+    expect(validarSenha('Abcdefg1'), true);
+  });
+
+  test('tem número', () {
+    expect(validarSenha('Abcdefgh1'), true);
+  });
+}
+
+função:
+
+bool validarSenha(String senha) {
+  if (senha.length < 8) {
+    return false;
+  }
+
+  if (!senha.contains(RegExp(r'[A-Z]'))) {
+    return false;
+  }
+
+  if (!senha.contains(RegExp(r'[0-9]'))) {
+    return false;
+  }
+
+  return true;
+}
