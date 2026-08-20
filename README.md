@@ -80,6 +80,9 @@ Aula 04 - Entrada de Dados
 Flutter - Aula 01.1
 Atividades em atraso
 Exercício de Revisão 
+Teste de Integração em Dart
+Introdução a Teste de Software com TDD
+
 
 Atividades faltantes:
 
@@ -97,3 +100,6 @@ Entrega das Telas Mobile em Flutter do projeto Integrador
 Criando APK com troca de Imagens e Nome de aplicativo
 Atividade de Construção
 
+Teste de Integração
+Plano de Teste
+Correção Código
